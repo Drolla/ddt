@@ -1085,8 +1085,8 @@ package provide ddt $ddt::version
 	#    If debugging is required, e.g. if break points are set, the patched 
 	#    commands (source, package, info) are activated.
 	#    If debugging is required and if the execution happens by a slave 
-	#    interpreter the required set of debug commands are created in the 
-	#    ::ddt namespace of the slave interpreter.
+	#    interpreter the required set of debug commands are created in the ::ddt
+	#    namespace of the slave interpreter.
 	#
 	# Parameters:
 	#    [DebugSupport] - Indicates if debugging is required

@@ -1,0 +1,39 @@
+array set nd2md_Link {
+  "Configuration" {group ddt Configuration}
+  "ddt::GetSource" {proc ddt proc-ddt::GetSource}
+  "ddt::RunEnvironment_Resume" {proc ddt proc-ddt::RunEnvironment_Resume}
+  "ddt::BuildCommandPositionsCmdString" {proc ddt proc-ddt::BuildCommandPositionsCmdString}
+  "ddt::info_debug" {proc ddt proc-ddt::info_debug}
+  "ddt::package_debug" {proc ddt proc-ddt::package_debug}
+  "ddt::Configure" {proc ddt proc-ddt::Configure}
+  "ddt::GetInstrumentalizedSource" {proc ddt proc-ddt::GetInstrumentalizedSource}
+  "DDT, Dynamic Debugging for Tcl" {title DDT-Introduction {DDT, Dynamic Debugging for Tcl}}
+  "ddt::Init" {proc ddt proc-ddt::Init}
+  "DDT - Dynamic Debugging for Tcl" {title ddt {DDT - Dynamic Debugging for Tcl}}
+  "ddt::RunEnvironment_Init" {proc ddt proc-ddt::RunEnvironment_Init}
+  "ddt::Exec" {proc ddt proc-ddt::Exec}
+  "ddt::GetSourceId" {proc ddt proc-ddt::GetSourceId}
+  "ddt::GetExecState" {proc ddt proc-ddt::GetExecState}
+  "ddt::SetBP" {proc ddt proc-ddt::SetBP}
+  "ddt::Stop" {proc ddt proc-ddt::Stop}
+  "ddt::RunEnvironment_Distroy" {proc ddt proc-ddt::RunEnvironment_Distroy}
+  "ddt::RunEnvironment_Stop" {proc ddt proc-ddt::RunEnvironment_Stop}
+  "ddt::source_debug" {proc ddt proc-ddt::source_debug}
+  "ddt::Eval" {proc ddt proc-ddt::Eval}
+  "ddt::Log" {proc ddt proc-ddt::Log}
+  "DDT internal variables" {group ddt {DDT internal variables}}
+  "ddt::GetBP" {proc ddt proc-ddt::GetBP}
+  "API" {group ddt API}
+  "DDT internal commands" {group ddt {DDT internal commands}}
+  "Dynamic Debugging for Tcl" {title ddt {Dynamic Debugging for Tcl}}
+  "ddt::Cont" {proc ddt proc-ddt::Cont}
+  "ddt::Step" {proc ddt proc-ddt::Step}
+  "ddt::LogDirect" {proc ddt proc-ddt::LogDirect}
+  "ddt::SwapBP" {proc ddt proc-ddt::SwapBP}
+  "ddt::Run" {proc ddt proc-ddt::Run}
+  "ddt::Instrumentalize" {proc ddt proc-ddt::Instrumentalize}
+  "ddt::GetBPLocations" {proc ddt proc-ddt::GetBPLocations}
+  "ddt::Brk" {proc ddt proc-ddt::Brk}
+  "ddt::BuildCommandPositions" {proc ddt proc-ddt::BuildCommandPositions}
+  "ddt::Refresh" {proc ddt proc-ddt::Refresh}
+}
