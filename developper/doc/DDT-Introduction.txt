@@ -6,10 +6,10 @@ DDT instrumentalizes the debugged code by inserting debugging helper commands. T
 
 A simple graphical Tcl debugger is also provided that demonstrates the way the DDT can be used.
 
-<ddt_debugger.gif>
+(see ddt_debugger.gif)
 
 
 ### What's next
 
-Start exploring the documentation of the DDT library [DDT]
+Start exploring the documentation of the <DDT> library
 
