@@ -37,7 +37,6 @@ proc GetLink {LinkText {LinkFile ""}} {
 # Parse the NaturalDoc documentation in a file, and generate the corresponding
 # MarkDown file.
 proc nd2md {NdFile MdFile LinkFile Format} {
-	puts "nd2md $NdFile $MdFile $LinkFile $Format"
 	global LanguageDefs nd2md_Link nd2md_config CreateReferenceIndexes
 
 	# Check the language definitions
@@ -260,7 +259,6 @@ proc GenIndexFile {MdIndexFile} {
 # Load the settings and index cache
 proc LoadConfigAndIndex {} {
 	uplevel {
-		puts "info script: [info script]"
 		# Load the language definitions. Load first the global and then the local
 		# definitions
 		source [file join [file dirname [info script]] "_nd2md.language_defs"]
@@ -278,7 +276,6 @@ proc LoadConfigAndIndex {} {
 
 # Store the index
 proc StoreIndex {} {
-	puts StoreIndex
 	global nd2md_Link
 	set f [open _nd2md.index w]
 	
