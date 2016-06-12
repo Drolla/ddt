@@ -8,6 +8,4 @@ A simple graphical Tcl debugger is also provided that demonstrates the way the D
 
 ### What's next
 
-Start exploring the documentation of the [DDT library]
-
-[DDT library]: DDT#ddt
+Start exploring the documentation of the [DDT library](https://github.com/Drolla/ddt/wiki/ddt)
