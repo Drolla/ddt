@@ -114,6 +114,13 @@ proc nd2md {NdFile MdFile LinkFile Format} {
 				if {$CreateReferenceIndexes} {
 					set nd2md_Link($Proc) [list proc $LinkFile "proc-$Proc"]
 				}
+			} elseif {[regexp {Var\s*:\s*(.+)} $DocText {} Var]} {
+				set MdLine "***\n\#\#\# Var: $Var"
+				set Mode Var
+				set NewSection Var
+				if {$CreateReferenceIndexes} {
+					set nd2md_Link($Var) [list proc $LinkFile "var-$Var"]
+				}
 			} elseif {$Mode=="Proc" && $Section=="" && [regexp {(.*[^\s]):\s*$} $DocText {} SubMode]} {
 				set MdLine "\#\#\#\# $SubMode"
 				set NewSection ProcSectionTitle
@@ -300,8 +307,9 @@ LoadConfigAndIndex
 #    [-d <Destination Directory>]
 #    [-o <OutputMdFile>]
 #    [-f <InputFormat>]
-#    [-x]                          - Generate new index MD file
-#    [-n]                          - Don't create reference indexes for the file content
+#    [-x] - Generate new index MD file
+#    [-n] - Don't create reference indexes for the file content
+#    [-config <Config>=<Value>] - Overrides configuration deined by _nd2md.settings file
 #    NdFile1 [NdFile2, ...]
 set GenIndex 0
 set DestDir $nd2md_DestDir
@@ -316,6 +324,10 @@ for {set a 0} {$a<[llength $argv]} {incr a} {
 		-f {set Format [lindex $argv [incr a]]}
 		-x {set GenIndex 1}
 		-n {set CreateReferenceIndexes 0}
+		-config {
+			regexp {^(.*)=(.*)$} [lindex $argv [incr a]] {} CfgName CfgValue
+			set nd2md_config($CfgName) $CfgValue
+		}
 		default {lappend NdFileList [lindex $argv $a]}
 	}
 }

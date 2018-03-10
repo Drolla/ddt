@@ -497,29 +497,46 @@ package provide ddt $ddt::version
 #    configurations:
 
 	# Var: ddt::Config(-BreakCallback)
-	#    Callback function configuration. Configures the callback function that 
+	#    Callback function configuration. Defines the callback function that 
 	#    will be called each time the execution of the debugged program is 
 	#    stopped.
+	#    
+	# Example:
+	#    > ddt::Configure -BreakCallback DebugGuiUpdate
+
 	set ddt::Config(-BreakCallback) ""
 
 	# Var: ddt::Config(-UseSI)
 	#    Slave interpreter setting. If set to 1 (default) a slave interpreter 
-	#    will be used.
+	#    will be used, if set to 0 the master interpreter will be used.
+	#    
+	# Example:
+	#    > ddt::Configure -UseSI 1
 	set ddt::Config(-UseSI) 1
 
 	# Var: ddt::Config(-InitVars)
 	#    Initialization variable definition. The variable initializations, defined 
 	#    as pairs of variable names/values, will be executed in the context of 
 	#    the debugged program prior to the program start.
+	#    
+	# Example:
+	#    > ddt::Configure -InitVars {argv0 "" argv ""}
 	set ddt::Config(-InitVars) {}
 
 	# Var: ddt::Config(-InitScript)
 	#    Initialization script. The defined script will be executed in the 
 	#    context of the debugged program prior to the program start.
+	#    
+	# Example:
+	#    > ddt::Configure -InitScript {}
 	set ddt::Config(-InitScript) {}
 
 	# Var: ddt::Config(-Mode)
-	#    Enables/disables debugging. Default is enable.
+	#    Enables/disables debugging. Valid settings are 'enable' (default), and 
+	#    'disable'.
+	#    
+	# Example:
+	#    > ddt::Configure -Mode enable
 	set ddt::Config(-Mode) enable
 
 ################ Internal variables and commands ################
