@@ -503,7 +503,6 @@ package provide ddt $ddt::version
 	#    
 	# Example:
 	#    > ddt::Configure -BreakCallback DebugGuiUpdate
-
 	set ddt::Config(-BreakCallback) ""
 
 	# Var: ddt::Config(-UseSI)
